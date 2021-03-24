@@ -1,5 +1,4 @@
 Dockerfile
 Makefile
 .*
-config/
 docker-compose*
