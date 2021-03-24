@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  mlflow:
+    image: lanpn85/mlflow
+    build: .
+    ports:
+      - 8111:5000
+    volumes:
+      - ./data:/data
+    environment:
+      MLF_BACKEND_STORE: 'sqlite:///data/mlflow.db'
+      MLF_ARTIFACT_STORE: '/data/artifacts/'
