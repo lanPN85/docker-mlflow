@@ -2,6 +2,8 @@ version: "3.5"
 
 services:
   mlflow:
+    env_file:
+      - .env
     image: lanpn85/mlflow
     build: .
     ports:
@@ -10,4 +12,3 @@ services:
       - ./data:/data
     environment:
       MLF_BACKEND_STORE: 'sqlite:///data/mlflow.db'
-      MLF_ARTIFACT_STORE: '/data/artifacts/'
