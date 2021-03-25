@@ -2,7 +2,7 @@ FROM python:3.7-buster
 
 LABEL maintainer="lanpn <phan.ngoclan58@gmail.com>"
 
-RUN pip install mlflow gevent
+RUN pip install mlflow gevent boto3
 
 ENV MLF_BACKEND_STORE ""
 ENV MLF_ARTIFACT_STORE ""
